@@ -10,8 +10,8 @@ For some use cases, the container demands a direct link to the physical port of 
 
 * [Before you start (Restrictions, Requirements and Assumptions)](#Before-you-start-(Restrictions,-Requements-and-Assumptions))
 * [Pass a physical NIC into a Kata Container](#Pass-a-physical-NIC-into-a-Kata-Container)
-  * [Part 1 – The Host](#Part-1-–-The-Host)
-  * [Part 2 – The Container](#Part-2-–-The-Container)
+  * [Part 1 – The Host](#part-1--the-host)
+  * [Part 2 – The Container](#part-2--the-container)
 * [Test Your Setup](#Test-Your-Setup)
 
 ## Before you start (Restrictions, Requirements and Assumptions)  
