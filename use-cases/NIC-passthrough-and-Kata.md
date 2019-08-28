@@ -2,7 +2,7 @@
 ![](https://github.com/Yuval-Ai/documentation/blob/doc-create-NIC-passthrough-and-Kata/use-cases/images/NIC%20passthrough%20Diagram.png)
 
 
-In this guide we walk through the process of passing a physical NIC into a Kata Container. The "usual" way that a KC (Kata Container) is wired for communication is through a series of bridges and virtual NICs as can be seen in the Image above. 
+In this guide we walk through the process of passing a physical NIC into a KC (Kata Container). The "usual" way that a KC is wired for communication is through a series of bridges and virtual NICs as can be seen in the Image above (marked as default). 
 
 For some use cases, the container demands a direct link to the physical port of the host device, for example in a situation were the container is required to route high BW traffic without having support for acceleration such as SR-IOV.
 
@@ -256,7 +256,7 @@ docker run -it --runtime=kata-runtime --name vfio_con --device /dev/vfio/39 -v /
 If you aren’t sure what just happened back there, here’s a breakdown of the command:
 - `docker run` - creates and runs the container. 
 - ` -it ` - docker command flags for “interactive” and “tty”.
-- ` --runtime=kata-runtime ` - tells docker to run the container as a kata container (if you set kata-runtime as the default runtime, this option is redundant).
+- ` --runtime=kata-runtime ` - tells docker to run the container as a KC (if you set kata-runtime as the default runtime, this option is redundant).
 - ` --name vfio_con ` – name the container. It can be any name you choose. 
 - ` --device /dev/vfio/39 ` – this one is the important part. With this command, you tell docker to pass the NIC to the container. 
 - `-v /dev:/dev `– here you tell docker to map the devices folder of the host to the devices folder of the container.
